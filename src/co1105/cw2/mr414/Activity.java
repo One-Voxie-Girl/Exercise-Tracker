@@ -34,12 +34,7 @@ public abstract class Activity implements Comparable<Activity> {
 
     @Override
     public int compareTo(Activity o) {
-        if (this.equals(o)) return 0;
-        else{
-            if (this.effort > o.effort) return 1;
-            else return -1;
-        }
-
+        return Double.compare(this.effort, o.effort);
     }
 
     public abstract String toString();
