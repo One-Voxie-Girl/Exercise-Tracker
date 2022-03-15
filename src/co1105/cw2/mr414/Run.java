@@ -5,8 +5,10 @@ import java.util.Objects;
 public class Run extends Activity{
     private int distance;
 
-    public Run(int d, int t){
+    public Run(int d, int t) throws InvalidActivityException{
         super(t);
+        if (!((0<d)&&(d<100000))) throw new InvalidActivityException("Distance must be between 0m and 100000m");
+        else if ((d/t)>20) throw new InvalidActivityException("Speed is not possible");
         distance=d;
         effort=(4*d)/(double)t;
     }

@@ -14,7 +14,7 @@ public class CW2Phase1 {
      * @return  return null if the supplied stats cannot make an Activity; create a Run if there are 2 numbers; create a Swim if there are 3 numbers
      */
     private static Activity makeActivity(String[] stats)
-    //	throws InvalidActivityException  // un-comment this line once phase 3 is complete
+    	throws InvalidActivityException  // un-comment this line once phase 3 is complete
     {
         final Activity act;
         int time;
@@ -41,7 +41,7 @@ public class CW2Phase1 {
      * @param args supply the filename of some activity data
      */
     public static void main(String[] args)
-    //	throws InvalidActivityException // un-comment this line once phase 3 is complete
+        throws InvalidActivityException // un-comment this line once phase 3 is complete
     {
         if (args.length != 1) {
             System.err.println("Usage: java CW2Phase1 <statsfile>");

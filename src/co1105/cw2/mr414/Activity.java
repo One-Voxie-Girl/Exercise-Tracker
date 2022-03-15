@@ -10,7 +10,8 @@ public abstract class Activity implements Comparable<Activity> {
 
     // More attributes go here...
 
-    public Activity(int t) {
+    public Activity(int t) throws InvalidActivityException{
+        if (!(t>0)) throw new InvalidActivityException("Time must be greater than 0s");
         time = t;
         activityID=++activityCounter;
 
